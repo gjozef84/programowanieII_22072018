@@ -34,10 +34,25 @@ public class DiamondTest {
     @Test
     public void diamondGeneratorC() {
         String expDiamond="  A  \n" +
-                          " B B \n" +
-                          "C   C\n"+
-                          " B B \n" +
-                          "  A  ";
+                " B B \n" +
+                "C   C\n"+
+                " B B \n" +
+                "  A  ";
         assertEquals(expDiamond, diamond.diamondGenerator('C'));
+    }
+
+    @Test
+    public void diamondGeneratorE() {
+        String expDiamond=
+                "    A    \n" +
+                "   B B   \n" +
+                "  C   C  \n"+
+                " D     D \n"+
+                "E       E\n"+
+                " D     D \n"+
+                "  C   C  \n"+
+                "   B B   \n" +
+                "    A    ";
+        assertEquals(expDiamond, diamond.diamondGenerator('E'));
     }
 }

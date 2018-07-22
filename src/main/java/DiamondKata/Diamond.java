@@ -29,7 +29,7 @@ public class Diamond {
                 if (i < stringList.size() - 1) diamond += stringList.get(i) + "\n";
                 else diamond += stringList.get(i);
             }
-
+            System.out.println(diamond);
             return diamond;
         }
     }
