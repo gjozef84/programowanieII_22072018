@@ -28,26 +28,26 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void showBuzz(){
+    public void showBuzz_WhenNumbersDivideBy_5(){
         assertEquals("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n", FizzBuzz.PrintRange(1,10));
     }
 
     @Test
-    public void showFizzBuzz(){
+    public void showFizzBuzz_WhenNumberDivideBy_3_and_By_5(){
         assertEquals("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\nFizz\n14\nFizzBuzz!\n", FizzBuzz.PrintRange(1,15));
     }
     @Test
-    public void showFizzWhenNumberContains3(){
+    public void showFizz_WhenNumberContains_3(){
         assertEquals("Fizz\nFizz\n14\nFizzBuzz!\n", FizzBuzz.PrintRange(12,15));
     }
 
     @Test
-    public void showBuzzWhenNumberContains5(){
+    public void showBuzz_WhenNumberContains_5(){
         assertEquals("Buzz\nFizz\n22\nFizz\nFizz\nBuzz\n", FizzBuzz.PrintRange(20,25));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void supportRangeFrom1to100(){
+    public void supportRangeOnlyFrom1to100(){
         FizzBuzz.PrintRange(101,103);
     }
 
