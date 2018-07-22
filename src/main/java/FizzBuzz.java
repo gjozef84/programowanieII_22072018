@@ -16,6 +16,7 @@ public class FizzBuzz {
             else stringOut += i + "\n";
         }
 
+        System.out.println(stringOut);
         return stringOut;
     }
 }
