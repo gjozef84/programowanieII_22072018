@@ -15,6 +15,7 @@ public class RemovePeople {
         persons.add(new Person(new String("Alyssa")));
         persons.add(new Person(new String("Alice")));
 
+
         /*for (Person person : persons){
             if (person.hasSameName(ben)) {
                 persons.remove(person);
