@@ -7,6 +7,7 @@ public class FizzBuzz {
 
     public static String PrintRange(int from, int to) {
         String stringOut = "";
+        //StringBuilder stringOut = new StringBuilder();
 
         if (!(from<100 && to > 1)) throw new IllegalArgumentException("Support range from 1 to 100");
         if (from > to) throw new IllegalArgumentException();
