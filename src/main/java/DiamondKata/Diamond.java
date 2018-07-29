@@ -16,7 +16,9 @@ public class Diamond {
 
     public String diamondGenerator(char letter) {
 
-        if (letter == 65) return String.valueOf(letter); // no braces here? you can compare it like: letter == 'A'
+        if (letter == 65) {
+            return String.valueOf(letter);
+        }// no braces here? you can compare it like: letter == 'A'
         else {
 
             String diamond = "";
@@ -27,7 +29,8 @@ public class Diamond {
 
             for (int i = 0; i < stringList.size(); i++) {
                 if (i < stringList.size() - 1) diamond += stringList.get(i) + "\n";
-                else diamond += stringList.get(i); // this might be a good place for a comment like 'do not add new line after last row'
+                else
+                    diamond += stringList.get(i); // this might be a good place for a comment like 'do not add new line after last row'
             }
             System.out.println(diamond);
             return diamond;
@@ -46,12 +49,12 @@ public class Diamond {
 
     public static String rowBuilder(char letter, int whichRow) { //funciton names are usually verbs, nouns are used for classes
         String row = "";
-        char aktualnaLetter = (char) (START_LETTER + whichRow); // maybe rename to currentLetter
-        String outherDashes = dashes(letter - aktualnaLetter);
+        char currentLetter = (char) (START_LETTER + whichRow); // maybe rename to currentLetter
+        String outherSpaces = spaces(letter - currentLetter);
 
-        row += outherDashes + aktualnaLetter + innerDashes(aktualnaLetter); //row could be declared here
-        if (whichRow > 0) row += aktualnaLetter; // maybe if(letter != 'A') would be clearer? (don't really know)
-        row += outherDashes;
+        row += outherSpaces + currentLetter + innerSpaces(currentLetter); //row could be declared here
+        if (whichRow > 0) row += currentLetter; // maybe if(letter != 'A') would be clearer? (don't really know)
+        row += outherSpaces;
 
         return row;
     }
@@ -63,12 +66,12 @@ public class Diamond {
         return reversRows;
     }
 
-    private static String innerDashes(int aktualnaLetter) {
-        int lettersInterval = aktualnaLetter - START_LETTER;
-        return dashes((lettersInterval * 2) - 1);
+    private static String innerSpaces(int currentLetter) {
+        int lettersInterval = currentLetter - START_LETTER;
+        return spaces((lettersInterval * 2) - 1);
     }
 
-    public static String dashes(int number) { //rename to spaces?
+    public static String spaces(int number) { //rename to spaces?
         return repeat(' ', number);
     }
 }
